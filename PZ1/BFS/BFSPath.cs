@@ -10,6 +10,7 @@ namespace PZ1.BFS
 
     public class BFSPath
     {
+        //u red se smesta polje koje je pocetak i pocinje pretraga
         public static PozicijaPolja[,] BFSPronadji(LineEntity line, char[,] BFSlinije)
         {
             BFSlinije[(int)line.PocetakX, (int)line.PocetakY] = 'P';
@@ -42,7 +43,7 @@ namespace PZ1.BFS
             {
                 PozicijaPolja polje = queue.Dequeue();
 
-               
+               //za svako polje koje se nadje u redu se gleda tacka koja je iznad,ispod,levo,desno
                 if (BFSlinije[polje.PozX, polje.PozY] == 'K')
                 {
                     BFSlinije[(int)line.PocetakX, (int)line.PocetakY] = ' ';
@@ -82,7 +83,8 @@ namespace PZ1.BFS
             BFSlinije[(int)line.KrajX, (int)line.KrajY] = ' ';
             return prev;
         }
-
+        //provera je l polje izvan dimenzija 300x300 ili je vec poseceno
+        //pretraga traje dok se ne dodje do polja koje je kraj voda
         private static bool isValid(int pozX, int pozY, bool[,] poseceno, char[,] bFSlinije)
         {
             if (pozX >= 0 && pozY >= 0 && pozX < 300 && pozY < 300 && bFSlinije[pozX, pozY] != 'X' && poseceno[pozX, pozY] == false)
@@ -94,7 +96,8 @@ namespace PZ1.BFS
                 return false;
             }
         }
-
+        //sledi rekonstruisanje putanje koje predstavlja vod
+        //Krece od poslednje tacke i vraca korak unazad dok ne dodje do pocetne tacke
         public static List<PozicijaPolja> RekonstruisanjePutanje(PozicijaPolja pocetak, PozicijaPolja kraj, PozicijaPolja[,] prev)
         {
             List<PozicijaPolja> putanja = new List<PozicijaPolja>();

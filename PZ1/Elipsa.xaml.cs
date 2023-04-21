@@ -86,7 +86,7 @@ namespace PZ1
              
                 Canvas.SetZIndex(prosledjujemTekst, 4);
 
-                string tekstZaElipsu = "";
+                string tekstZaElipsu ="";
                 if (tekstUnutarElipse.Text.Length != 0)
                 {
                     tekstZaElipsu = tekstUnutarElipse.ToString();

@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="EditPolygon" Height="450" Width="450">
     <Grid Background="Pink">
-        <Label Content="Unesite debljinu konturne linije:" FontWeight="Bold" HorizontalAlignment="Left" Margin="51,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="Izaberite boju poligona: " FontWeight="Bold" HorizontalAlignment="Left" Margin="53,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.519,-0.281"/>
+        <Label Content="Debljina zute konturne linije:" FontWeight="Bold" HorizontalAlignment="Left" Margin="51,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Boja poligona: " FontWeight="Bold" HorizontalAlignment="Left" Margin="53,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.519,-0.281"/>
         <Label Content="Tekst unutar poligona(opciono): " FontWeight="Bold" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top"/>
         <Label Content="Boja teksta(opciono): " FontWeight="Bold" HorizontalAlignment="Left" Margin="53,281,0,0" VerticalAlignment="Top"/>
-        <Label Content="Izaberite providnost poligona(0-95%): " HorizontalAlignment="Left" Margin="53,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.519,-0.281"/>
+        <Label Content="Providnost poligona(0-95%): " FontWeight="Bold" HorizontalAlignment="Left" Margin="53,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.519,-0.281"/>
 
         <TextBox x:Name="debljinaKonturneLinije" HorizontalAlignment="Left" Height="23" Margin="260,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <TextBox x:Name="tekstUnutarPoligona" HorizontalAlignment="Left" Height="23" Margin="260,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>

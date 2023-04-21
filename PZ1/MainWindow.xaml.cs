@@ -60,8 +60,7 @@ namespace PZ1
         List<UIElement> saMape = new List<UIElement>();
 
         
-        public string obojVod = "nemoj";
-        public string obojPoOtpornosti = "nemoj";
+       
         public List<UIElement> zaBrisanje = new List<UIElement>();
 
         
@@ -220,12 +219,15 @@ namespace PZ1
             }
             iscrtaoPresek = true;
         }
-
+        //pocetak algoritma BFS
         private void BFSProlaz(LineEntity line, Point start, Point end)
         {
             PozicijaPolja pocetak = new PozicijaPolja((int)line.PocetakX, (int)line.PocetakY);
             PozicijaPolja kraj = new PozicijaPolja((int)line.KrajX, (int)line.KrajY);
+            //skladisti predjena polja u matricu prev,svako polje neposeceno sem pocetnog
+            
             PozicijaPolja[,] prev = BFSPath.BFSPronadji(line, BFSprom.BFSlinije);
+
             List<PozicijaPolja> putanja = BFSPath.RekonstruisanjePutanje(pocetak, kraj, prev);
 
             
@@ -427,7 +429,8 @@ namespace PZ1
             odstojanjeLon = (praviXmax - praviXmin) / 300;
             odstojanjeLat = (praviYmax - praviYmin) / 300;
         }
-
+        //koord.entiteta: tacke x i y se oduzmu od min.tacaka x i y koje se javljaju da bi se ustanovila
+        //udaljenost od pocetne tacke a onda deli sa odstojanjem vec skalirane ose
         private void MestoNaCanvasu(double noviX, double noviY, out double relativnoX, out double relativnoY)
         {
            
